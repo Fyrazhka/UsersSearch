@@ -11,7 +11,23 @@
 }
 
 .App{
+
+}
+
+.post{
   width: 800px;
-  justify-content:center;
   display: flex;
+  padding: 15px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px auto;
+  border: 3px solid darkblue;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  background-color: aliceblue;
+  width: 100vw;
+  height: 70px;
 }
