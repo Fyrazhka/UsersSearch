@@ -1,0 +1,7 @@
+.myButton{
+    border-radius: 50%;
+    border: 2px solid darkgray;
+    width:45px;
+    height:45px;
+    background-color: white;
+}
