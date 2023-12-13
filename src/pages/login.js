@@ -16,14 +16,22 @@ const Login = () => {
     return (
             <div>
                 <Navbar/>
-                <h1 style={{display:"flex", justifyContent:"center"}}>Страница авторизации</h1>
-                <form className="login" onSubmit={login}>
-                    <label>Логин</label>
-                    <MyInput type="text" placeholder="Логин"></MyInput>
-                    <label>Пароль</label>
-                    <MyInput type="password" placeholder="Пароль"></MyInput>
-                    <MyButton>Войти</MyButton>
-                </form>
+                <div className="login">
+                    <h1 style={{display:"flex", justifyContent:"center"}}>Страница авторизации</h1>
+                    <form className="login__form" onSubmit={login}>
+                        <div>
+                            <label>Логин</label>
+                            <MyInput type="text" placeholder="Логин"></MyInput>
+                        </div>
+                        <div>
+                            <label>Пароль</label>
+                            <MyInput type="password" placeholder="Пароль"></MyInput>
+                        </div>
+
+
+                        <MyButton>Войти</MyButton>
+                    </form>
+                </div>
             </div>
     );
 };

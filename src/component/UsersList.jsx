@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import UsersItem from "./UsersItem";
 
-const UsersList = ({posts,title}) => {
+const UsersList = ({users,title}) => {
 
-    if(!posts.length)
+    if(!users.length)
     {
         return (<h1 style={{ textAlign: 'center' }}>
             Пользователи не найдены!
@@ -15,8 +15,8 @@ const UsersList = ({posts,title}) => {
             <h1 style={{ textAlign: 'center' }}>
                 {title}
             </h1>
-            {posts.map((post)=>
-                <UsersItem key={post.id} post={post}/>
+            {users.map((user)=>
+                <UsersItem key={user.id} user={user}/>
             )}
         </div>
     );

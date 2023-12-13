@@ -9,10 +9,10 @@ const UsersItem = (props) => {
     };
 
     return (
-            <div className="post" onClick={handleRedirect}>
-                <div key={props.post.id} className="post__content">
-                    <strong>{props.post.title}</strong>
-                    <div>{props.post.body}</div>
+            <div className="users" onClick={handleRedirect}>
+                <div key={props.user.id} className="users__content">
+                    <strong>{props.user.title}</strong>
+                    <div>{props.user.body}</div>
                 </div>
             </div>
     );

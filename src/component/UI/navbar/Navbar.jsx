@@ -8,13 +8,15 @@ import {AuthContext} from "../../../context";
 const Navbar = ({filter=null,setFilter=null}) => {
     const navigate = useNavigate();
     const{isAuth,setIsAuth}=useContext(AuthContext)
-    const handleRedirect = () => {
+    const handleRedirectLogin = () => {
         if(localStorage.getItem('auth'))
             localStorage.removeItem('auth');
         setIsAuth(false);
         navigate('/Login');
     };
-
+    const handleRedirectUsers = () => {
+        navigate('/allUsers');
+    };
 
     return (
         <div className="header">
@@ -26,11 +28,13 @@ const Navbar = ({filter=null,setFilter=null}) => {
                 :null
             }
             {localStorage.getItem('auth')
-                    ? <div  className="header__login" onClick={handleRedirect}>
-                        <MyButton children="Выход" />
+                    ? <div  className="header__login" >
+                        <MyButton style={{borderRadius:0, width:100}} children="Пользователи" onClick={handleRedirectUsers}/>
+                        <MyButton children="Выход" onClick={handleRedirectLogin}/>
                        </div>
-                    :<div  className="header__login" onClick={handleRedirect}>
-                        <MyButton children="Вход" />
+                    :<div  className="header__login" >
+                        <MyButton style={{borderRadius:0, width:100}} children="Пользователи" onClick={handleRedirectUsers}/>
+                        <MyButton children="Вход" onClick={handleRedirectLogin}/>
                      </div>
             }
 
